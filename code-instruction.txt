@@ -1,0 +1,7 @@
+1) Add contact to the web app.
+	- Add button that takes to add page.
+2) Add Page
+	- Input field to add Contact Name. - type: string
+	- Input field to add Phone Number. - type: number
+	- Save button to save the contact.
+	- Cancel button discard the contact.
