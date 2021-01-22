@@ -1,15 +1,15 @@
-let name = document.getElementById('contactName').value;
-let phnNum = document.getElementById('contactNumber').value;
+let name = document.querySelector('#contactName');
+let phnNum = document.querySelector('#contactNumber');
+let display = document.querySelector('#display-contact');
 
-class Contact {
-	constructor(name,phnNum){
-		this.name;
-		this.phnNum;
-	}
+
+let addContact = (name,phnNum) => {
+	if(name && phnNum){
+	name = name.value;
+	phnNum = phnNum.value;
 }
-
-let addContact = () => {
-	let contact = new Contact(name,phnNum);
+	console.log(name);
+	console.log(phnNum);
 }
 
 addContact();
