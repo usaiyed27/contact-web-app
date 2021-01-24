@@ -1,7 +1,13 @@
+Version 4
+
+[x] It should have a place to store user input.
+[x] The add function should add the user input as an object.
+[] The contacts should be displayed on the homepage.
+
 Version 3
-[] Initialize the contacts variable with object
+[x] Initialize the contacts variable with object
 [x] The add function should add objects.
-[] The edit function should edit objects.
+[x] The edit function should edit objects.
 
 Version 2
 
