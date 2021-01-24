@@ -1,0 +1,18 @@
+Version 3
+[] Initialize the contacts variable with object
+[x] The add function should add objects.
+[] The edit function should edit objects.
+
+Version 2
+
+[x] It should have a function to add contact
+[x] It should have a function to edit contact
+[x] It should have a function to remove contact
+
+Version 1
+
+[x] It should have a place to store contacts
+[x] It should have a way to display contacts
+[x] It should have a way to add contacts
+[x] It should have a way to edit contacts
+[x] It should have a way to remove contacts

@@ -10,5 +10,45 @@
 			
 		</div>
 		<button><a href="add-contact.html">+</a></button>
+		<script type="text/javascript">
+		
+		//Store contacts	
+		var contacts = [
+				{
+				  contactName: 'Contact 1',
+				  contactNumber: 'Phone 1'	
+				},
+				{
+				  contactName: 'Contact 2',
+				  contactNumber: 'Phone 2'	
+				},
+				{
+				  contactName: 'Contact 3',
+				  contactNumber: 'Phone 3'	
+				}
+			];
+
+		//Display contacts
+		console.log(contacts);
+	
+		//Add Contacts to Array
+		function addContact(contact,phone){
+			contacts.push({contactName: contact, contactNumber:phone});
+			console.log(contacts);
+		}
+
+		//Edit Contacts
+		function editContact(position, value){
+			contacts[position] = value;
+			console.log(contacts);
+		}
+
+		//Remove Contacts
+		function removeContact(position){
+			contacts.splice(position,1);
+			console.log(contacts);
+		}
+
+		</script>
 	</body>	
 </html>
