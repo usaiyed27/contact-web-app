@@ -31,8 +31,6 @@
 		}
 		
 		displayContacts();
-
-		console.log(contacts);
 		
 		let inputName = document.getElementById('name');
 		let inputPhone = document.getElementById('phone');

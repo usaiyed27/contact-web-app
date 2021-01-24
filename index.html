@@ -3,13 +3,24 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Contact Web App</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<h1>Contacts</h1>
 		<div id="display-contact">
 			
 		</div>
-		<button><a href="add-contact.html">+</a></button>
+		<button class="add-button"><a href="add-contact.html">+</a></button>
+		<div id="add-contact">
+			<label>Contact Name</label></br />
+			<input type="text"  id="name" placeholder="name"><br /><br />
+
+			<label>Contact Number</label><br />
+			<input type="phone" id="phone" placeholder="123-456-7890"><br /><br />
+
+			<input type="button" name="Cancel" value="Cancel">
+			<button id="addBtn"><a href="index.html">Save</a></button>
+		</div>
 		<script type="text/javascript" src="contact.js"></script>
 	</body>	
 </html>
