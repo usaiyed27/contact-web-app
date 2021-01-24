@@ -20,8 +20,13 @@
 		
 		function displayContacts(){
 			contacts.forEach(contact => {
-				let contactDisplay = contact['contactName']
-				allContactDisplay.appendChild(contactDisplay);
+				let paragraph = document.createElement('p');
+				let anchor = document.createElement('a');
+				anchor.setAttribute('href', '#');
+				let contactDisplay = document.createTextNode(contact['contactName']);
+				anchor.appendChild(contactDisplay);
+				paragraph.appendChild(anchor);
+				allContactDisplay.appendChild(paragraph);
 			});
 		}
 		
