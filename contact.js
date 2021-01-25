@@ -22,9 +22,10 @@
 			contacts.forEach(contact => {
 				let paragraph = document.createElement('p');
 				let anchor = document.createElement('a');
-				anchor.setAttribute('href', '#');
+				anchor.setAttribute('href', 'edit-contact.html');
 				let contactDisplay = document.createTextNode(contact['contactName']);
 				anchor.appendChild(contactDisplay);
+				anchor.addEventListener('click', editContact);
 				paragraph.appendChild(anchor);
 				allContactDisplay.appendChild(paragraph);
 			});
@@ -45,13 +46,15 @@
 		addBtn.onclick = function() {addContact(inputName.value, inputPhone.value)};
 
 		//Edit Contacts
-		function editContact(position, value){
-			if(typeof(value) === 'string'){
-				contacts[position].contactName = value;
-			}else{
-				contacts[position].contactNumber = value;
-			}
-			console.log(contacts);
+		function editContact(event){
+			let editName = document.querySelector('#editName');
+			let editNumber = document.querySelector('#editPhone');
+			let text = event.target.innerText;
+				console.log(text);
+				editName.value  = text;
+				editNumber.value = contacts['contactNumber'];
+		
+			console.log(editName.value);
 		}
 
 		//Remove Contacts
