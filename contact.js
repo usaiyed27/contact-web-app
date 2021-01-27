@@ -47,14 +47,15 @@
 
 		//Edit Contacts
 		function editContact(event){
-			let editName = document.querySelector('#editName');
+			let editName = document.getElementById('#editName');
 			let editNumber = document.querySelector('#editPhone');
 			let text = event.target.innerText;
-				console.log(text);
-				editName.value  = text;
-				editNumber.value = contacts['contactNumber'];
-		
-			console.log(editName.value);
+				contacts.forEach(contact => {
+					if(contact['contactName'] === text){
+						console.log(editName.value);
+						console.log(editNumber.value);
+				    }
+				});
 		}
 
 		//Remove Contacts
