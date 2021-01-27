@@ -25,11 +25,7 @@
 				anchor.setAttribute('href', 'edit-contact.html');
 				let contactDisplay = document.createTextNode(contact['contactName']);
 				anchor.appendChild(contactDisplay);
-				anchor.addEventListener('click', function(){
-					setTimeout(function(){
-						editContact(event);
-					}, 3000);
-				});
+				anchor.addEventListener('click', editContact)
 				paragraph.appendChild(anchor);
 				allContactDisplay.appendChild(paragraph);
 			});
@@ -54,12 +50,14 @@
 			let editName = document.querySelector('#editName');
 			let editNumber = document.querySelector('#editPhone');
 			let text = event.target.innerText;
-				contacts.forEach(contact => {
-					if(contact['contactName'] === text){
-						editName.value = contact['contactName'];
-						editNumber.value = contact['contactNumber'];
-				    }
-				});
+				if(editName && editNumber){
+					contacts.forEach(contact => {
+						if(contact['contactName'] === text){
+							editName.value = contact['contactName'];
+							editNumber.value = contact['contactNumber'];
+						}
+					});		
+				}
 		}
 
 		//Remove Contacts
