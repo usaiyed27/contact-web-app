@@ -25,7 +25,11 @@
 				anchor.setAttribute('href', 'edit-contact.html');
 				let contactDisplay = document.createTextNode(contact['contactName']);
 				anchor.appendChild(contactDisplay);
-				anchor.addEventListener('click', editContact);
+				anchor.addEventListener('click', function(){
+					setTimeout(function(){
+						editContact(event);
+					}, 3000);
+				});
 				paragraph.appendChild(anchor);
 				allContactDisplay.appendChild(paragraph);
 			});
@@ -47,13 +51,13 @@
 
 		//Edit Contacts
 		function editContact(event){
-			let editName = document.getElementById('#editName');
+			let editName = document.querySelector('#editName');
 			let editNumber = document.querySelector('#editPhone');
 			let text = event.target.innerText;
 				contacts.forEach(contact => {
 					if(contact['contactName'] === text){
-						console.log(editName.value);
-						console.log(editNumber.value);
+						editName.value = contact['contactName'];
+						editNumber.value = contact['contactNumber'];
 				    }
 				});
 		}
