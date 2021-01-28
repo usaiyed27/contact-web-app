@@ -25,7 +25,7 @@
 				anchor.setAttribute('href', 'edit-contact.html');
 				let contactDisplay = document.createTextNode(contact['contactName']);
 				anchor.appendChild(contactDisplay);
-				anchor.addEventListener('click', editContact)
+				//anchor.addEventListener('click', editContact)
 				paragraph.appendChild(anchor);
 				allContactDisplay.appendChild(paragraph);
 			});
