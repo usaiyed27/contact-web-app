@@ -59,9 +59,3 @@
 					});		
 				}
 		}
-
-		//Remove Contacts
-		function removeContact(position){
-			contacts.splice(position,1);
-			console.log(contacts);
-		}
